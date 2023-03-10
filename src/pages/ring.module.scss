@@ -1,0 +1,88 @@
+@use "sass:color";
+@import "../scss/mixins";
+@import "../scss/variables";
+@import "../scss/import";
+
+
+
+
+
+.text{
+    display: flex;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    font-size: 3rem;
+    text-shadow: 2px 2px rgb(231 12 143);
+    align-self: center;
+    justify-content: center;
+}
+
+.container{
+    background-color: white;
+    height: 30rem;
+    width: 90%;
+    margin: auto;
+    border: 2px solid rgb(231, 12, 143);
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-around;
+
+}
+
+.flex{
+    display:flex;
+    justify-content: space-around;
+}
+
+
+//Extended class
+.extension{
+    color: lightseagreen;
+    font-size: 30px;
+}
+
+.testring3{
+    @extend .extension;
+    font-weight:bold;
+}
+
+
+//Mixins
+.testring {
+    @include myPrecious (6px, 6px, 4px, #ff0000);
+    font-size: 30px;
+}
+
+
+//Variables
+.testring2 {
+    color: $main-color;
+    font-weight: $font-weight;
+    font-size: 30px;
+ }
+    
+
+
+ //Import
+ .testring4{
+    @extend .imports;
+ }
+
+ //Loops
+    @for $i from 1 through 3 {
+        .testring6:nth-child(3n + #{$i}) {
+         color: lighten(red, $i * 10%);
+        }
+      }
+ 
+
+ .testring6{
+    font-size: 40px;
+ }
+
+ .testring5{
+    display:flex;
+    justify-content: center;
+ }

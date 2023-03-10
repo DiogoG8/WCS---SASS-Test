@@ -1,0 +1,4 @@
+@mixin myPrecious ($x, $y, $blur, $color) {
+    text-shadow : $x $y $blur $color;
+    box-shadow : $x/2 $y/2 $blur/2 lighten($color, 50);    
+} 
